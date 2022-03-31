@@ -1,6 +1,7 @@
-import { useState, useEffect } from "react";
+import { useCallback, useState, useEffect } from "react";
 
-function Hello() {
+function Hello(props) {
+  console.log(props);
   useEffect(() => {
     console.log("hi");
     return () => console.log("bye");
@@ -13,7 +14,7 @@ function App() {
   const onClick = () => setShowing((prev) => !prev); // 이전 value를 받아온 다음에 그 value의 반대값을 return
   return (
     <div>
-      {showing ? <Hello /> : null}
+      {showing && <Hello />}
       <button onClick={onClick}>{showing ? "Hide" : "Show"}</button>
     </div>
   );
