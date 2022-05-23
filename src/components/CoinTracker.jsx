@@ -1,7 +1,6 @@
 import React from "react";
-import { useState, useEffect } from "react";
 
-export const CoinTracker = () => {
+export default function CoinTracker() {
   const [loading, setLoading] = useState(true); //로딩을 위한 스테이트
   const [coins, setCoins] = useState([]); // 코인리스트를 위한 스테이트
   useEffect(() => {
@@ -28,4 +27,4 @@ export const CoinTracker = () => {
       )}
     </div>
   );
-};
+}
