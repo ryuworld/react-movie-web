@@ -1,5 +1,5 @@
 import { useState, React, useEffect } from "react";
-import { Movie } from "../components/Movie";
+import Movie from "../components/Movie";
 import axios from "axios";
 
 export default function Home() {
@@ -29,6 +29,7 @@ export default function Home() {
           {movies.map((movie) => (
             <Movie
               key={movie.id}
+              id={movie.id}
               coverImg={movie.medium_cover_image}
               title={movie.title}
               summary={movie.summary}
